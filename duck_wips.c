@@ -23,5 +23,8 @@ int main(int argc,char *argv[]){
     for(int i=1;i<argc;i++){
         black_list[i-1] = Eliminate(argv[i],":");
     }
+    for(int i=0;i<argc-1;i++){
+        printf("%s",black_list[i]);
+    }
     
 }
