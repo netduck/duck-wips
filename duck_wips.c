@@ -27,6 +27,9 @@ void delete_char(char *str, char* ch)
 }
 
 int main(int argc,char *argv[]){
+    if(argc < 3){
+        printf("sudo ./duck_wips.c <interface> <mac_address1> <mac_address2> <mac_address3>...")
+    }
     char *black_list[argc];
     unsigned char *Interface = argv[1];
     char errbuf[PCAP_ERRBUF_SIZE];
