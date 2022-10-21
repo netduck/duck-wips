@@ -32,7 +32,6 @@ int main(int argc,char *argv[]){
     }
     // char *black_list[argc];
     char **black_list;
-    printf("WTF!");
     black_list = (char **)malloc(sizeof(char*)*(argc-2));
     for(int i=0;i<argc-2;i++){
         black_list[i] = (char *)malloc(sizeof(char)*18);
@@ -50,9 +49,8 @@ int main(int argc,char *argv[]){
         delete_char(argv[i],":");
         black_list[i-2] = argv[i];
     }
-    printf("WTF!!!");
-    // for(int i=0;i<argc-2;i++){
-    //     printf("%s",*black_list[i]);
-    // }
+    for(int i=0;i<argc-2;i++){
+        printf("%s",black_list[i]);
+    }
     
 }
