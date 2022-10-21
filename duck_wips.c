@@ -39,7 +39,7 @@ int main(int argc,char *argv[]){
 
     for(int i=2;i<argc;i++){
         delete_char(argv[i],":");
-        black_list[i-1] = argv[i];
+        black_list[i-2] = argv[i];
     }
 
     for(int i=0;i<argc-2;i++){
