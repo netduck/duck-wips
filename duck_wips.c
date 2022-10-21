@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void Eliminate(char *str, char ch)
+void Eliminate(char *str, char* ch)
 {
     for (; *str != '\0'; str++)//종료 문자를 만날 때까지 반복
     {
