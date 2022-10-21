@@ -7,8 +7,14 @@
 #include <time.h>
 
 int main(int argc,char *argv[]){
-    // char black_list[][];
+    char *black_list[];
     for(int i=1;i<argc;i++){
-        printf("%s",argv[i]);
+        black_list[i-1] = argv[i];
+        printf("%s\n",argv[i]);
     }
+    printf("black_list\n");
+    for(int i=0;i<argc-1;i++){
+        printf("%s\n",black_list[i]);
+    }
+    
 }
