@@ -32,9 +32,9 @@ int main(int argc,char *argv[]){
     }
     // char *black_list[argc];
     char **black_list;
-    *black_list = (char **)malloc(sizeof(char*)*(argc-2));
+    black_list = (char **)malloc(sizeof(char*)*(argc-2));
     for(int i=0;i<argc-2;i++){
-        black_list = (char *)malloc(sizeof(char)*18);
+        black_list[i] = (char *)malloc(sizeof(char)*18);
     }
     unsigned char *Interface = argv[1];
     char errbuf[PCAP_ERRBUF_SIZE];
