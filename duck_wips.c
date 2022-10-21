@@ -6,6 +6,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+typedef struct
+{
+    char *dev_;
+} Param;
+
+Param param = {
+    .dev_ = NULL};
+
 void delete_char(char *str, char* ch)
 {
     for (; *str != '\0'; str++)//NULL까지 반복
