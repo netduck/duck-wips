@@ -20,12 +20,18 @@ void delete_char(char *str, char* ch)
 
 int main(int argc,char *argv[]){
     char *black_list[argc];
-    for(int i=1;i<argc;i++){
+    unsigned char *Interface = argv[1];
+    char errbuf[PCAP_ERRBUF_SIZE];
+    pcap_t *pcap = pcap_open_live(Interface, BUFSIZ, 1, 1000, errbuf);
+    if (pcap == NULL)
+    {
+        fprintf(stderr, "pcap_open_live(%s) return null - %s\n", param.dev_, errbuf);
+        return -1;
+    }
+
+    for(int i=2;i<argc;i++){
         delete_char(argv[i],":");
         black_list[i-1] = argv[i];
     }
-    for(int i=0;i<argc-1;i++){
-        printf("%s\n",black_list[i]);
-    }
-    
+
 }
