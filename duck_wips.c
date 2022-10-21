@@ -25,7 +25,7 @@ int main(int argc,char *argv[]){
         black_list[i-1] = argv[i];
     }
     for(int i=0;i<argc-1;i++){
-        printf("%s",black_list[i]);
+        printf("%s\n",black_list[i]);
     }
     
 }
