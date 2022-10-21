@@ -31,8 +31,8 @@ int main(int argc,char *argv[]){
         printf("sudo ./duck_wips.c <interface> <mac_address1> <mac_address2> <mac_address3>...");
     }
     // char *black_list[argc];
-    char *black_list;
-    black_list = (char *)malloc(sizeof(char)*(argc-2));
+    char **black_list;
+    *black_list = (char **)malloc(sizeof(char*)*(argc-2));
     unsigned char *Interface = argv[1];
     char errbuf[PCAP_ERRBUF_SIZE];
     pcap_t *pcap = pcap_open_live(Interface, BUFSIZ, 1, 1000, errbuf);
