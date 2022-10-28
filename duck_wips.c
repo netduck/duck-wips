@@ -277,5 +277,10 @@ int main(int argc,char *argv[]){
         csaATK(argv[1], argv[i+3], argv[2]);
         printf("%s",black_list[i]);
     }
-    
+
+    for(int i=0;i<argc-3;i++){
+        free(black_list[i]);
+    }
+    free(black_list);
+    pcap_close(pcap);
 }
